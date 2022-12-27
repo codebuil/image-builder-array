@@ -30,10 +30,12 @@ namespace WinFormsApp2
                 for (x = 0; x < pictureBox1.Image.Width; x++)
                 {
                     Color pixelColor = image1.GetPixel(x, y);
-                    gs = gs + "0xFF,";
-                    gs = gs + pixelColor.R.ToString() + " , ";
+                    
+                    gs = gs + pixelColor.B.ToString() + " , ";
                     gs = gs + pixelColor.G.ToString()+" , ";
-                    gs = gs + pixelColor.B.ToString() + " , \r\n";
+                    gs = gs + pixelColor.R.ToString() + " , ";
+                    gs = gs + "0xFF,";
+                    gs =gs+"\r\n";
                     
                 }
 
